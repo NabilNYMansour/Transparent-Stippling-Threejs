@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" href="/logo.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="A web app that showcases a shader that allows for a stippling transparency effect." />
+  <meta name="keywords" content="Stippling, Stanford bunny, 3D, Shaders, Three.js, GLSL" />
+  <meta name="author" content="Nabil Mansour" />
+  <link rel="apple-touch-icon" href="/logo.png" />
+  <title>Transparent Stippling</title>
+  <style>
+    @font-face {
+      font-family: 'Caviar-Dreams';
+      src: url('/Caviar-Dreams.ttf.woff') format('woff'),
+        url('/Caviar-Dreams.ttf.svg#Caviar-Dreams') format('svg'),
+        url('/Caviar-Dreams.ttf.eot'),
+        url('/Caviar-Dreams.ttf.eot?#iefix') format('embedded-opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    .info-containter {
+      display: flex;
+      justify-content: center;
+    }
+
+    .info {
+      position: absolute;
+      color: white;
+      top: 0;
+      margin: 0;
+      font-family: 'Caviar-Dreams';
+      padding: 10px;
+      background-color: rgba(0, 0, 0, 0.75);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+
+    a {
+      color: lightsalmon;
+    }
+
+    @media (max-aspect-ratio: 3/4) {
+      .info {
+        font-size: small;
+        left: 0;
+        right: 0;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+      }
+    }
+
+    #loading {
+      position: absolute;
+      color: white;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-family: 'Caviar-Dreams';
+      font-size: 2em;
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="info-containter">
+    <div class="info">
+      Transparent stippling effect with <a href="https://threejs.org/" target="_blank">Three.js</a>
+      by <a href="https://nabilmansour.com/" target="_blank">Nabil Mansour</a>.
+      <br>
+      Code for the page can be found <a href="https://github.com/NabilNYMansour" target="_blank">on GitHub</a>.
+      <br>
+      Bunny model from <a href="https://graphics.stanford.edu/~mdfisher/Data/Meshes/bunny.obj" target="_blank">Stanford</a>.
+      <br>
+      <b>Zoom in and out</b> to see the effect in action.
+    </div>
+  </div>
+
+  <div id="loading">
+    LOADING...
+  </div>
+
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <script type="module" src="/src/main.ts"></script>
+</body>
+
+</html>
